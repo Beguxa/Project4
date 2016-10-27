@@ -1,0 +1,16 @@
+doctype html
+html
+        head
+                script(src="../../angular.min.js")
+                script(src="../../route.js")
+                script(src="../../main.js")
+        body
+                div(ng-app="mainApp" ng-controller="editBookController" ng-init="book = #{JSON.stringify(book)}")
+                        input(ng-model="names")
+                        li #{book.title}
+                        li #{book.author}
+                        li #{book.price}
+                        li #{book.avail}
+                        a(href="#editBookForm") edit
+                        div(ng-view="")
+                        

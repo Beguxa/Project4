@@ -1,0 +1,19 @@
+<form action="/saveBook" method="post">
+    <label> ISBN </label>
+    <input ng-model="book.isbn" placeholder="ISBN" name="isbn"/>
+    <label> Book Title</label>
+    <input ng-model="book.title" placeholder="Book Title" name="title"/>
+    <label> Book Author </label>
+    <input ng-model="book.author" placeholder="Book Author" name="author"/>
+    <label> Book Price</label>
+    <input ng-model="book.price" placeholder="Book Price" name="price"/>
+    <label> Available on</label>
+    <input ng-model="book.avail" type="text" name="avail">
+    <input ng-model="book.bookId" name="bookId">
+    
+    
+    <input ng-model="authorToSearch" ng-change="searchAuthor()"/>
+    
+    <input type="submit" value="Add New Book"/>
+</form>
+ 

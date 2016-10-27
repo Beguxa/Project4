@@ -1,0 +1,24 @@
+doctype html
+html
+        head
+                script(src="angular.min.js")
+                script(src="route.js")
+                script(src="main.js")
+        body
+                div(ng-app="mainApp" ng-controller="mainController")
+                                a(href="/addBook") Add Book
+                                a(href="/addAuthor") Add Author
+                                a(href="/editBook") Edit Book
+                                a(href="/editAuthor") Edit Author
+                                div 
+                                button(ng-click="x()") click
+                                input(ng-model="searchContent",ng-change="search()")
+                                ul
+                                        li(ng-repeat="x in bookList") 
+                                                a(href="/editBook/bookId/{{x.bookId}}") {{x.isbn}}
+                                                a {{x.title}}
+                                                a(href="/editAuthor/authorName/x") {{x.author}}
+                                                a {{x.price}}
+                                                a {{x.avail}}
+                                                a {{x.bookId}}
+                                
